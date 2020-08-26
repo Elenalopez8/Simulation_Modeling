@@ -1,0 +1,69 @@
+---
+title: "README - Simulation"
+author: "Elena Lopez"
+date: "25/04/2020"
+output: html_document
+---
+
+## SIMULATION OF VENTILATOR TIRAGE DURING COVID-19 PANDEMIC
+
+### Objective 
+
+Assess three different policies of ventilator allocation and examine the optimal quantity of ventilators in stock for three different policies. 
+
+### Steps
+
+#### Scenario analysis
+The team conducted scenario analysis using simulation modeling. The three scenarios analyzed are as follows:
+
+    - Policy #1: First Come First Serve (Random)
+In this scenario, 100 ventilators are assigned 100 random patients out of the total 170 patients.
+As the ventilator assignment is random, the survival will depend on the age group and the survival probability of the patient who comes in first. 
+
+    - Policy #2: Prioritizing based on Age Group (Ascending)
+In this scenario, younger patients are given priority for ventilator assignment. The team assumed that all the patients arrive at the same time. In this case, the team sorted the sample data of 170 patients in ascending order of their age group and assign ventilators to the top 100 patients who are the youngest.
+
+    - Policy #3: Prioritizing based on Age Group (Descending)
+In this scenario, elder patients are given priority for ventilator assignment. The team assumed that all the patients arrive at the same time. In this case, the team sorted the sample data of 170 patients in descending order of their age group and assign ventilators to the top 100 patients who are the oldest. 
+
+#### Sensitivity analysis of ventilator capacity
+
+After the scenario analysis, the team conducted sensitivity analysis of ventilator capacity (ie optimal number of ventilators).
+The sensitivity analysis allows to assess the survival probability of a fixed number of patients that arrives at the hospital for different number of ventilators available. In this case, the number of patients remains the same as in the previous scenarios. However, the number of ventilators is a range between 98 and 120.
+
+
+### Data set
+
+Sample data of 170 patients, randomly generated based on age distribution of research paper (please refer to Yang, et al., 2020 in references section)
+#### Simulation parameters (these numbers can be modified according to the objective of the project)
+- patients = 170
+- ventilators = 100
+- number of simulations= 100000
+
+
+### Assumptions of the simulation model
+
+1. Simulations are done only for a given day
+2. All the hospitals in the region are considered to be one unit
+3. All the incoming patients are critical and require ventilator
+4. Incoming patients in the hospital on the given day is 170
+5. There are 100 ventilators available in the hospital
+6. The data and model is not specific to any location
+7. Patient who does not get a ventilator dies immediately
+
+
+### References
+
+- Yang, X., Yu, Y., Xu, J., Shu, H., Xia, J., Liu, H., ... Shang, Y. (2020). Clinical course and outcomes of critically ill patients with SARS-CoV-2 pneumonia in Wuhan, China: a single-centered, retrospective, observational study.The Lancet Respiratory Medicine. doi: 10.1016/s2213-2600(20)30079-5
+
+- Robertson-Steel I. (2006). Evolution of triage systems. Emergency medicine journal : EMJ , 23(2), 154–155. https://doi.org/10.1136/emj.2005.030270
+
+- Truog, R. D., Mitchell, C., & Daley, G. Q. (2020). The Toughest Triage — Allocating Ventilators in a Pandemic. New England Journal of Medicine. doi: 10.1056/nejmp2005689
+
+
+### Thank-you note
+
+Thank you, Steven Shechter for providing us with an excellent guidance and encouraging us to undertake this project.
+
+Special thanks to my teammates for the insighful feedback and conversations, great support, fun moments and the last push together to present this project. 
+
